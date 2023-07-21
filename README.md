@@ -60,7 +60,7 @@ From the root folder lingua, compile using:
 
 
 
-## FROM HERE WE GO BACK TO ORIGINAL INSTRUCTIONS
+## FROM HERE WE GO BACK TO ORIGINAL INSTRUCTIONS (but I would say you can skip them if not interested in the Accuracy)
 
 8. Put the generated test data files in [`/src/accuracyReport/resources/language-testdata`][test data directory url].
    Do **not** rename the test data files.
