@@ -24,30 +24,39 @@ From the root folder lingua, compile using:
 5. Use [`LanguageModelFilesWriter`][language model files writer url] to create the language model files.
    The training data file used for ngram probability estimation is not required to have a specific format
    other than to be a valid txt file. Please don’t include very long paragraphs, it may throw an error (when longer than 4096) in step 9. For this step:
-5.1. Clone this repo
-Copy there the lingua-with-dependencies.jar file from lingua\build\libs
-5.2. Prepare there an input folder with two txt files as in the case of Gallego.
-5.3. Prepare two empty output folders as in the case of “gl” and “gl-test”, and modify “AppData.kt” and “AppTest.kt” to pass the correct folders.
-5.4. Execute the following in the command line (install kotlinc, a kotlin compiler, if it is not installed): 
-`kotlinc -classpath lingua-with-dependencies.jar AppData.kt -d AppData.jar`
-Now execute:
-`java -cp "lingua-with-dependencies.jar;App.jar" com.github.pemistahl.lingua.app.AppKt`
+   
+   5.1. Clone this repo and copy there the lingua-with-dependencies.jar file from lingua\build\libs
 
-The output should be:
-`Start.
-Test.
-This worked.`
+   5.2. Prepare there an input folder with two txt files as in the case of Gallego.
 
-6. Create a new subdirectory in [`/src/main/resources/language-models`][language models directory url]
+   5.3. Prepare two empty output folders as in the case of “gl” and “gl-test”, and modify “AppData.kt” and “AppTest.kt” to pass the correct folders.
+
+   5.4. Execute the following in the command line (install kotlinc, a kotlin compiler, if it is not installed): 
+
+   `kotlinc -classpath lingua-with-dependencies.jar AppData.kt -d AppData.jar`
+
+   Now execute:
+
+   `java -cp "lingua-with-dependencies.jar;App.jar" com.github.pemistahl.lingua.app.AppKt`
+
+   The output should be:
+
+   `Start.
+   Test.
+   This worked.`
+
+7. Create a new subdirectory in [`/src/main/resources/language-models`][language models directory url]
    and put the generated language model files in there. Do **not** rename the language model files.
    The name of the subdirectory **must** be the language's ISO 639-1 code, completely lowercased.
-7. Use [`TestDataFilesWriter`][test data files writer url] to create the test data files used for
+8. Use [`TestDataFilesWriter`][test data files writer url] to create the test data files used for
    accuracy report generation. The input file from which to create the test data should have each
    sentence on a separate line. To do so, execute: 
 
-`kotlinc -classpath lingua-with-dependencies.jar AppData.kt -d AppData.jar`
-Now execute:
-`java -cp "lingua-with-dependencies.jar;App.jar" com.github.pemistahl.lingua.app.AppKt`
+   `kotlinc -classpath lingua-with-dependencies.jar AppData.kt -d AppData.jar`
+
+   Now execute:
+
+   `java -cp "lingua-with-dependencies.jar;App.jar" com.github.pemistahl.lingua.app.AppKt`
 
 
 
